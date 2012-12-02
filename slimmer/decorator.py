@@ -8,18 +8,13 @@ except ImportError:
 
 def compress_html(view_func):
     """
-    Decorator that adds headers to a response so that it will
-    never be cached.
+    Decorator that compresses the the content of the response if its
+    content-type is text/html.
     """
     def _wrapped_view_func(request, *args, **kwargs):
         response = view_func(request, *args, **kwargs)
-        if isinstance(response, HttpResponse) and \
-            response.get('Content-Type',None).find('text/html;')==0:
+        if isinstance(response, HttpResponse) \
+           and response.get('Content-Type', '').find('text/html;') == 0:
             response.content = slimmer.xhtml_slimmer(response.content)
         return response
     return wraps(view_func)(_wrapped_view_func)
-
-
-
-
-

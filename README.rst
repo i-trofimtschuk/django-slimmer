@@ -2,9 +2,12 @@
 django-slimmer
 ==============
 
-This module is a django conversion of CheckoutableTemplates Zope package: http://zope.org/Members/peterbe/CheckoutableTemplates
+This module is a wrapper around Peter Bengtssons great slimmer module ::
 
-The slimmer is taken directly from the Zope package, with django middleware
+    https://github.com/peterbe/slimmer
+    http://pypi.python.org/pypi/slimmer
+
+The slimmer is taken directly from the slimmer package on PyPI, with django middleware
 and a view decorator added.
 
 The slimming process takes html and removes whitespace, optimizes inline css,
@@ -13,7 +16,7 @@ reduction even after the page is served with gzip compression.
 
 Installation ::
 
-    sudo easy_install django-slimmer
+    pip install -e git+git://github.com/i-trofimtschuk/django-slimmer.git#egg=slimmer
 
 
 Install middleware ::
@@ -21,7 +24,7 @@ Install middleware ::
     'slimmer.middleware.CompressHtmlMiddleware',
 
 Or you can use a view decorator to compress specific views ::
-    
+
     from slimmer.decorator import compress_html
 
     @compress_html
