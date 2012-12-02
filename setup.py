@@ -16,7 +16,7 @@ setup(  name='django-slimmer',
         zip_safe=False,
         license='MIT',
         install_requires=[
-            'slimmer'
+            'slimmer',
             'setuptools',
         ],
         packages = find_packages(),

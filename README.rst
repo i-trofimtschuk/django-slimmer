@@ -16,7 +16,7 @@ reduction even after the page is served with gzip compression.
 
 Installation ::
 
-    pip install -e git+git://github.com/i-trofimtschuk/django-slimmer.git#egg=slimmer
+    pip install -e git+git://github.com/i-trofimtschuk/django-slimmer.git#egg=django-slimmer
 
 
 Install middleware ::
