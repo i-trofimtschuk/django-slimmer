@@ -34,6 +34,6 @@ Or you can use a view decorator to compress specific views ::
 
 Using the slimmer directly ::
 
-    from slimmer import slimmer
+    import slimmer
     compressed = slimmer.xhtml_slimmer(html)
 
