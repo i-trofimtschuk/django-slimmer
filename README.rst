@@ -21,11 +21,11 @@ Installation ::
 
 Install middleware ::
 
-    'slimmer.middleware.CompressHtmlMiddleware',
+    'django_slimmer.middleware.CompressHtmlMiddleware',
 
 Or you can use a view decorator to compress specific views ::
 
-    from slimmer.decorator import compress_html
+    from django_slimmer.decorator import compress_html
 
     @compress_html
     def browse(request):
